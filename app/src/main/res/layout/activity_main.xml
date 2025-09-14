@@ -97,6 +97,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+     <TimePicker
+         android:id="@+id/timePicker"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:timePickerMode="spinner"
+         />
+
  </LinearLayout>
 
 
@@ -169,7 +176,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Priorytet:"
+        android:text="Priorytet marszu:"
         />
 
     <LinearLayout
@@ -179,12 +186,14 @@
 
 
         <RadioGroup
+            android:id="@+id/priorytet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
 
             <RadioButton
+                android:id="@+id/prioukryty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ukryty"
@@ -192,6 +201,7 @@
 
 
             <RadioButton
+                android:id="@+id/priozbalansowany"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="zbalansowany"
@@ -199,6 +209,7 @@
 
 
             <RadioButton
+                android:id="@+id/prioforsowny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="forsowny"
@@ -213,12 +224,22 @@
         android:layout_height="wrap_content">
 
         <SeekBar
+            android:id="@+id/seekBar"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:max="120"
+
             />
+
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/wartoscSuwaka"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Czas marszu: 0 min"
+        />
 
 
     <Chronometer
@@ -275,7 +296,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="start"
+            android:text="Odliczanie do wymarszu"
             android:backgroundTint="#E91E63"
             />
 
@@ -303,6 +324,14 @@
 
 
         <RatingBar
+            android:id="@+id/ocenaRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/ocenaTextView"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
